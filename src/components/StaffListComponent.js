@@ -15,9 +15,9 @@ export default class StaffListComponent extends Component {
     this.setState({ selectstaffs: staff})    ;  
   }
 
-ColoumSelect(Col){
+ColoumSelect(selectcoloum){
   this.setState({
-    classdefault:Col
+    classdefault:selectcoloum
   })
 }
 
@@ -28,7 +28,7 @@ ColoumSelect(Col){
           <img src={staff.image}></img><br/>
           <strong>Họ và tên:{staff.name} </strong>
           <br />
-          Năm sinh{nbsp}: <i>{dateFormat(staff.doB, "dd/mm/yyyy")}</i>
+          Năm sinh: <i>{dateFormat(staff.doB, "dd/mm/yyyy")}</i>
           <br />
           Phòng ban: <i>{staff.department.name}</i>
           <br />
