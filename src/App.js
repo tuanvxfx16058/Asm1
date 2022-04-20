@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Navbar dark color="primary">
           <div className="container">
-            <div className="row" style={{ color: "white" }}>
+            <div className="row p-2" style={{ color: "white" }}>
               Ứng dụng quản lý nhân sự V1.0
             </div>
           </div>

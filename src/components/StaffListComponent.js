@@ -1,25 +1,31 @@
 import React, { Component } from "react";
 import dateFormat from "dateformat";
+import { Col } from "reactstrap";
 
 export default class StaffListComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       selectstaffs: null,
-      columdefault: "col-xs-12 col-sm-6 col-md-4 p-2"
+      classdefault: "col-xs-12 col-sm-6 col-md-4 p-2"
     };
   }
 
   ListDetail(staff) {
-    this.setState({ selectstaffs: staff},
-      
-      );
+    this.setState({ selectstaffs: staff})    ;  
   }
+
+ColoumSelect(Col){
+  this.setState({
+    classdefault:Col
+  })
+}
 
   renderdetail(staff) {
     if (staff != null)
       return (
         <div className="p-3 border bg-light text-left ">
+          <img src={staff.image}></img><br/>
           <strong>Họ và tên:{staff.name} </strong>
           <br />
           Năm sinh: <i>{dateFormat(staff.doB, "dd/mm/yyyy")}</i>
@@ -45,8 +51,8 @@ export default class StaffListComponent extends Component {
         <div
           key={staff.id}
           onClick={() => this.ListDetail(staff)}
-          className={(this.state.columdefault)}
-        >
+          className={this.state.classdefault}
+          >
           <div id={`id${staff.id}`} className="p-3 border bg-light">
             {staff.name}
           </div>
@@ -56,17 +62,17 @@ export default class StaffListComponent extends Component {
     return (
       
       <div className="container">
-        <div className="btn-group">
-          <button onClick={()=>this.setState.columdefault="col-6"} className="btn btn-outline-primary">2 Cot</button>
-          <button className="btn btn-outline-primary">3 Cot</button>
-          <button className="btn btn-outline-primary">4 Cot</button>
-          <button className="btn btn-outline-primary">6 Cot</button>
+        <div className="btn-group row p-2">
+          <button onClick={()=>this.ColoumSelect("col-12 p-2")} className="btn btn-outline-primary">1 Cot</button>
+          <button onClick={()=>this.ColoumSelect("col-4 p-2")} className="btn btn-outline-primary">3 Cot</button>
+          <button onClick={()=>this.ColoumSelect("col-3 p-2")} className="btn btn-outline-primary">4 Cot</button>
+          <button onClick={()=>this.ColoumSelect("col-2 p-2")} className="btn btn-outline-primary"> 6 Cot</button>
         </div>
         
-        <div className="row g-2">{newarry}</div>
+        <div className="row p-2">{newarry}</div>
         <h6>Bấm vào tên nhân viên để xem thông tin</h6>
         <div className="row g-2">
-          <div className="col-4">
+          <div className="col-xs-12 col-sm-6 col-md-6">
             {this.renderdetail(this.state.selectstaffs)}
           </div>
         </div>
