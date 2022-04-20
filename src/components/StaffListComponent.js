@@ -28,7 +28,7 @@ ColoumSelect(Col){
           <img src={staff.image}></img><br/>
           <strong>Họ và tên:{staff.name} </strong>
           <br />
-          Năm sinh: <i>{dateFormat(staff.doB, "dd/mm/yyyy")}</i>
+          Năm sinh{nbsp}: <i>{dateFormat(staff.doB, "dd/mm/yyyy")}</i>
           <br />
           Phòng ban: <i>{staff.department.name}</i>
           <br />
@@ -67,6 +67,8 @@ ColoumSelect(Col){
           <button onClick={()=>this.ColoumSelect("col-4 p-2")} className="btn btn-outline-primary">3 Cot</button>
           <button onClick={()=>this.ColoumSelect("col-3 p-2")} className="btn btn-outline-primary">4 Cot</button>
           <button onClick={()=>this.ColoumSelect("col-2 p-2")} className="btn btn-outline-primary"> 6 Cot</button>
+          <button onClick={()=>this.ColoumSelect("col-1 p-2")} className="btn btn-outline-primary"> 12 Cot</button>
+
         </div>
         
         <div className="row p-2">{newarry}</div>
