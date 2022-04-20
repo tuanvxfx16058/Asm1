@@ -7,7 +7,7 @@ export default class StaffListComponent extends Component {
     super(props);
     this.state = {
       selectstaffs: null,
-      classdefault: "col-xs-12 col-sm-6 col-md-4 p-3 class"
+      classdefault: "col-xs-12 col-sm-6 col-md-4 p-3"
     };
   }
 
