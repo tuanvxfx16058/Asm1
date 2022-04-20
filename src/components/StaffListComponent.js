@@ -11,7 +11,9 @@ export default class StaffListComponent extends Component {
   }
 
   ListDetail(staff) {
-    this.setState({ selectstaffs: staff });
+    this.setState({ selectstaffs: staff},
+      
+      );
   }
 
   renderdetail(staff) {
@@ -55,7 +57,7 @@ export default class StaffListComponent extends Component {
       
       <div className="container">
         <div className="btn-group">
-          <button className="btn btn-outline-primary">2 Cot</button>
+          <button onClick={()=>this.setState.columdefault="col-6"} className="btn btn-outline-primary">2 Cot</button>
           <button className="btn btn-outline-primary">3 Cot</button>
           <button className="btn btn-outline-primary">4 Cot</button>
           <button className="btn btn-outline-primary">6 Cot</button>
