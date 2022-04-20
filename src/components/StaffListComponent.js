@@ -4,12 +4,25 @@ import { Col } from "reactstrap";
 
 export default class StaffListComponent extends Component {
   constructor(props) {
+    console.log("constructor")
     super(props);
     this.state = {
       selectstaffs: null,
       classdefault: "col-xs-12 col-sm-6 col-md-4 p-2"
     };
   }
+
+componentDidMount(){
+  console.log("copmponentDidMount")
+}
+
+componentDidUpdate(){
+  console.log("componentDisUpdate")
+}
+
+componentWillUnmount(){
+  console.log("componentWillUnmount")
+}
 
   ListDetail(staff) {
     this.setState({ selectstaffs: staff})    ;  
@@ -46,6 +59,7 @@ ColoumSelect(selectcoloum){
   }
 
   render() {
+    console.log("render")
     const newarry = this.props.staffs.map((staff) => {
       return (
         <div
