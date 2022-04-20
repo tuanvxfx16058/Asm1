@@ -12,17 +12,17 @@ export default class StaffListComponent extends Component {
     };
   }
 
-componentDidMount(){
-  console.log("copmponentDidMount")
-}
+// componentDidMount(){
+//   console.log("copmponentDidMount")
+// }
 
-componentDidUpdate(){
-  console.log("componentDisUpdate")
-}
+// componentDidUpdate(){
+//   console.log("componentDisUpdate")
+// }
 
-componentWillUnmount(){
-  console.log("componentWillUnmount")
-}
+// componentWillUnmount(){
+//   console.log("componentWillUnmount")
+// }
 
   ListDetail(staff) {
     this.setState({ selectstaffs: staff})    ;  
