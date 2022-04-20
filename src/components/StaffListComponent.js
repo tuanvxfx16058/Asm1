@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import dateFormat from "dateformat";
-import { Col } from "reactstrap";
 
 export default class StaffListComponent extends Component {
   constructor(props) {
@@ -38,7 +37,7 @@ ColoumSelect(selectcoloum){
     if (staff != null)
       return (
         <div className="p-3 border bg-light text-left ">
-          <img src={staff.image}></img><br/>
+          <img src={staff.image} alt="anhthe"></img><br/>
           <strong>Họ và tên:{staff.name} </strong>
           <br />
           Năm sinh: <i>{dateFormat(staff.doB, "dd/mm/yyyy")}</i>
