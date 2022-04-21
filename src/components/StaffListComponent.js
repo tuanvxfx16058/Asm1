@@ -54,7 +54,7 @@ export default class StaffListComponent extends Component {
           onClick={() => this.ListDetail(staff)}
           className={this.state.classdefault}
         >
-          <div id={`id${staff.id}`} className="p-3 border bg-light">
+          <div className="p-3 border bg-light">
             {staff.name}
           </div>
         </div>
